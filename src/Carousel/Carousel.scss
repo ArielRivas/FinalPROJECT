@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+.slideTwo {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 3%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://wallpaperaccess.com/full/4141147.jpg);
+  border-radius: 10%;
+  background-size: cover;
+
+  .slideInfo {
+    width: 40%;
+    gap: 10%;
+  }
+
+  .subtittle {
+    font-family: "Exo", sans-serif;
+    color: white;
+    margin-bottom: 2%;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .sliderTittle {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    text-align: left;
+  }
+
+  span {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #20c9ac;
+  }
+
+  .sliderParagraph {
+    text-align: left;
+    margin-top: 2%;
+    color: white;
+    font-family: "Exo", sans-serif;
+    margin-bottom: 5%;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .slideButton {
+    font-family: "Exo", sans-serif;
+    width: 180px;
+    background-color: #20c9ac;
+    height: 32px;
+    border-radius: 2px;
+    color: white;
+
+    &:hover {
+      opacity: 70%;
+    }
+  }
+}
+
+.buttonSlider {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.9rem;
+  color: white;
+  background-color: transparent;
+  border: dashed 1px #20c9ac;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    transition: 1s ease-in-out;
+    background: #20c9ac;
+  }
+}

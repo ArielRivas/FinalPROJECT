@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+.loginContainer {
+  height: 100vh;
+  margin-bottom: 3%;
+  background-image: url(https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGVhcnRoJTIwYXQlMjBuaWdodHxlbnwwfHwwfHw%3D&w=1000&q=80);
+  background-size: cover;
+  position: relative;
+
+  .formContainer {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    height: 700px;
+    width: 600px;
+    background: rgba(151, 200, 240, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(32, 201, 172, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-family: "Orbitron", sans-serif;
+    color: white;
+  }
+
+  .loginTicket {
+    width: 350px;
+    margin-top: 10%;
+  }
+
+  .loginForm {
+    margin-top: 8%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin-bottom: 8px;
+      font-size: 1rem;
+      font-family: "Orbitron", sans-serif;
+      color: white;
+    }
+
+    input {
+      margin-bottom: 24px;
+      width: 350px;
+      height: 38px;
+      background-color: #101923;
+      border: 1px solid #2b659b;
+      border-radius: 3px;
+      font-family: "Exo", sans-serif;
+      font-size: 0.9rem;
+      padding: 2%;
+    }
+  }
+
+  .loginButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    margin-top: 2%;
+  }
+
+  .loginButton {
+    font-family: "Exo", sans-serif;
+    width: 180px;
+    background-color: #20c9ac;
+    height: 32px;
+    border-radius: 2px;
+    color: white;
+    background-color: transparent;
+    border: dashed 1px #20c9ac;
+  }
+
+  .loginButton:hover {
+    transition: 1s ease-in-out;
+    background: #20c9ac;
+  }
+}
