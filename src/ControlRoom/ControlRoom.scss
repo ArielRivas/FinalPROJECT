@@ -1,3 +1,25 @@
-body {
-    color: black;
+.container__ControlRoom {
+    background-image: url(../assets/controlRoom/planetsControlRoom.png);
+    .container__ControlRoom-Decoration {
+        text-transform: uppercase;
+    }
+    .container__ControlRoom-Buttons {
+        text-transform: uppercase;
+        .ControlRoom__Buttons-Button {
+            &:hover {
+                color: var();
+            }
+        }
+    }
+}
+.container__ControlRoom-Connections  {
+    .container__ControlRoom-Connections h4 {
+        text-transform: uppercase;
+    }
+}
+.container__ControlRoom-RocketImg {
+left: 0;
+}
+.container__ControlRoom-TextHeadline {
+    text-transform: uppercase;
 }
