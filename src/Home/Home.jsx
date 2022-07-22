@@ -6,29 +6,20 @@ import homeKeple from '../assets/home/homeKeple.png'
 import homePegasus from '../assets/home/homePegasus.png'
 import homerMarsSlider1 from '../assets/home/homerMarsSlider1.png'
 import video from '../assets/home/video.mp4'
-import Login from '../Login/Login';
 import Carousel from '../Carousel/Carousel';
+import { SliderData } from '../Carousel/SliderData';
 
 
 
 const Home = () => {
 
-    const slides = [
-        { img: '../assets/home/homerMarsSlider1.png' , title: "Lorem ipsum is simply text of the history of the printing", subtitle: "YOUR MISSION", paragraph:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" },
-    
-        { img: '../assets/home/homerMarsSlider2.png' , title: "Lorem ipsum is simply text of the history of the printing", subtitle: "OUR MISSION", paragraph:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" },
-        
-        { img: '../assets/home/homePatch.png' , title: "Lorem ipsum is simply text of the history of the printing", subtitle: "THE LAST MISSION", paragraph:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" },
-        
-      ];
-    
   return (
     <> 
         <div className='heroVideo'>
+            <h1 className='homeTittle'>When destiny calls you....</h1>
             <video className='videoTag' autoPlay loop muted>
             <source src={video} type='video/mp4' />
             </video>
-            <h1 className='homeTittle'>When destiny calls youu....</h1>
         </div>
 
         <div className='line'>
@@ -72,7 +63,13 @@ const Home = () => {
             <hr></hr>
         </div>
 
-        <Carousel images={slides} />
+        <Carousel slides={SliderData} />
+
+        <div className='line'>
+            <hr></hr>
+            <div className='circle'></div>
+            <hr></hr>
+        </div>
 
         <div className='slideTwo'>
                 <div className='slideInfo'>
@@ -85,9 +82,6 @@ const Home = () => {
 
                 <img className='planetImageSlider' src={homerMarsSlider1} alt=''></img>
                 
-
-                <button className='buttonSlider'> {'GO!'} </button>
-
         </div>
 
         <div className='line'>
@@ -116,9 +110,7 @@ const Home = () => {
                 <p>Paola Vargas</p>
             </div>
         </div>
-
-            
-        
+                    
     </> 
   )
 }
