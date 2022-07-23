@@ -1,42 +1,68 @@
 import React from 'react'
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import './Login.scss';
 import loginTicket from '../assets/login/loginTicket.png'
-
+import { loginUser } from "../redux/auth/auth.actions";
 
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const redirectEvil = () => navigate('/'); // Reemplazar URL
+  const redirectHero = () => navigate('/'); // Remplazar URL
+
+  const doLogin = (event) => {
+    event.preventDefault();
+
+    const idInput = document.querySelector("#id");
+    const emailInput = document.querySelector("#email");
+    const id = idInput.value;
+    const email = emailInput.value;
+
+    const isEvil = document.querySelector("#evil").checked ? true : false;
+
+    if (isEvil) {
+      dispatch(loginUser(id, email, redirectEvil));
+    }
+    else {
+      dispatch(loginUser(id, email, redirectHero));
+    }
+  }
+
   return (
     <div className='loginContainer'>
 
-        <div className='formContainer'>
-            <img className='loginTicket' src={loginTicket} /> 
-            
-            <form className='loginForm'>
-            <label>
-                <p>ID Number</p>
-                <input type="text" name="ID" placeholder='Write your ID soldier' />
-                </label>
+      <div className='formContainer'>
+        <img className='loginTicket' src={loginTicket} alt="imgLogin" />
 
-                <label>
-                <p>Email</p>
-                <input type="text" name="ID" placeholder='Write your funny email' />
-                </label>
-            </form>
+        <form className='loginForm' onSubmit={doLogin}>
+          <label>
+            <p>ID Number</p>
+            <input id="id" type="text" name="ID" required placeholder='Write your ID soldier' />
+          </label>
 
-            <p>CHOOSE YOUR EVIL LEVEL</p>
+          <label>
+            <p>Email</p>
+            <input type="text" id="email" name="email" required placeholder='Write your funny email' />
+          </label>
 
-            <div className='loginButtons'>
-                <button className='loginButton'>Evil</button>
-                <button className='loginButton'>Hero</button>
-            </div>
+          <p>CHOOSE YOUR EVIL LEVEL</p>
 
-            
+          <ul className="levels">
+            <li className="lgnButton">
+              <input type="radio" id="evil" required name="level" />
+              <label htmlFor="evil">Evil</label>
+            </li>
+            <li className="lgnButton">
+              <input type="radio" id="hero" required name="level" />
+              <label htmlFor="hero">Hero</label>
+            </li>
+          </ul>
 
-            <button className=''>
-
-            </button>
-        </div>
-        
+          <button type="submit" className="btnLogin">SEND</button>
+        </form>
+      </div>
     </div>
   )
 }
