@@ -1,3 +1,72 @@
-body {
-    color: black;
+.container__ControlRoom-component {
+  background-image: url(../assets/controlRoom/planetsControlRoom.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: auto;
+  font-family: "Orbitron", sans-serif;
+  padding-top: 6%;
+  align-self: center;
+  gap: 60px;
+  .container__ControlRoom-Decoration button {
+    text-transform: uppercase;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    background: none;
+    border-radius: 50%;
+    padding: 30px;
+    align-content: center;
+    padding-left: 15%;
+  }
+  .container__ControlRoom-Buttons {
+    left: 0;
+    text-transform: uppercase;
+    position: relative;
+
+    .ControlRoom__Buttons-Button {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      padding: 22px 10px;
+      text-align: center;
+      text-transform: uppercase;
+      background: none;
+      color: white;
+      border: dashed 2px white;
+      &:hover {
+        color: var(--color-interactive);
+        border: dashed 2px var(--color-interactive);
+      }
+    }
+  }
+}
+.container__ControlRoom-Connections {
+  text-transform: uppercase;
+  color: var(--color-weak-font);
+  gap: 5px;
+  padding: 3px;
+}
+.container__ControlRoom-Connections-a h4,
+.container__ControlRoom-Connections-b h4 {
+  font-size: 20px;
+  text-decoration: underline;
+}
+.container__ControlRoom-RocketImg img {
+  margin-left: 40%;
+  margin-top: -20%;
+}
+.container__ControlRoom-TextHeadline {
+  text-transform: uppercase;
+  color: white;
+  left: 0;
+}
+.myImg {
+  display: block;
+  position: relative;
+  z-index: 4;
+  border: 5px solid white;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: 5px 0 0 5px;
 }
