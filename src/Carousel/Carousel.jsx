@@ -1,37 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { SliderData } from './SliderData';
 import './Carousel.scss';
-import { useState } from 'react';
 
-const Carousel = ({images}) => {
-  const [imageCurrent, setImageCurrent] = useState(0);
-  const count = images ?.length; 
+const Carousel = ({ slides }) => {
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
 
-  const nextImage = () => {
-  setImageCurrent(imageCurrent === count - 1 ? 0 : imageCurrent + 1);
-	};
-  
-  const previousImage = () => {
-  setImageCurrent(imageCurrent === 0 ? count - 1 : imageCurrent - 1);
-	};
-  
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
+
   return (
-		<div className='slideTwo'>
-			<button onClick={previousImage} className="buttonSlider" >GO!</button>
-			{images.map((image, index) => {
-				return (
-					<div className='slideInfo'>
-              <h4 className='subtittle'>{image.subtitle}</h4>
-              <h2 className='.sliderTittle'>{image.title}</h2>
-              <p className='.sliderParagraph'>{image.paragraph}</p>
-            </div>
-				);
-			})}
-			<button onClick={nextImage} className="buttonSlider" >GO!</button>
-		</div>
-	);
-}
+    <section className='slider'>
+      <button className='buttonSlider' onClick={prevSlide}>GO!</button> 
 
+	  {SliderData.map((slide, index) => {
+        return (
 
-export default Carousel
+		
+          <div
+            className={index === current ? 'slide active' : 'slide'}
+            key={index}
+          >
+            {index === current && (
+			<>
+			  <p className='carouselSubtitle'>{slide.subtitle}</p>	
+			  <h3 className='carouselTitle' >{slide.title}</h3>
+              <img src={slide.image} alt='travel image' className='image' />
 
+			</>	  
+            )}
+          </div>
+				
+	  
+        );
+      })}
 
+      <button className='buttonSlider' onClick={nextSlide}>GO!</button>
+    </section>
+  );
+};
+
+export default Carousel;

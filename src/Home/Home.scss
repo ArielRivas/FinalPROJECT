@@ -8,17 +8,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;300;400;600&family=Montserrat:wght@100;400;600;700&family=Orbitron:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;1,100&family=Sacramento&display=swap");
 
 body {
-  background-color: #020d22;
+  background-color: #010918;
 }
 
 .heroVideo {
-  height: 100vh;
   margin-bottom: 3%;
 
   .videoTag {
-    height: 100vh;
+    height: auto;
     width: 100vw;
-    top: 0;
     padding: none;
     z-index: -10;
     object-fit: cover;
@@ -32,10 +30,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 10vh;
     color: white;
     z-index: 10;
+  }
 
+  @media (max-width: 768px) {
+    .homeTittle {
+      font-size: 2rem;
+    }
   }
 
   @media (max-width: 600px) {

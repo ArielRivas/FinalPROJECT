@@ -5,66 +5,50 @@
   font-size: 100%;
 }
 
-.slideTwo {
-  height: 100vh;
+.slider {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin-bottom: 3%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(https://wallpaperaccess.com/full/4141147.jpg);
-  border-radius: 10%;
-  background-size: cover;
+  height: auto;
 
-  .slideInfo {
-    width: 40%;
-    gap: 10%;
+  img {
+    background-size: contain;
+    width: 100%;
+    height: auto;
+    border-radius: 15%;
   }
 
-  .subtittle {
-    font-family: "Exo", sans-serif;
-    color: white;
-    margin-bottom: 2%;
-    font-weight: 300;
-    font-size: 1rem;
-  }
-
-  .sliderTittle {
-    font-family: "Orbitron", sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    color: white;
-    text-align: left;
-  }
-
-  span {
-    font-family: "Orbitron", sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    color: #20c9ac;
-  }
-
-  .sliderParagraph {
-    text-align: left;
-    margin-top: 2%;
-    color: white;
-    font-family: "Exo", sans-serif;
-    margin-bottom: 5%;
-    font-weight: 300;
-    font-size: 1rem;
-  }
-
-  .slideButton {
-    font-family: "Exo", sans-serif;
-    width: 180px;
-    background-color: #20c9ac;
-    height: 32px;
-    border-radius: 2px;
-    color: white;
-
-    &:hover {
-      opacity: 70%;
+  @media (max-width: 996px) {
+    .slider {
+      margin-bottom: 1%;
+      height: auto;
     }
+  }
+
+  .slideActive {
+    position: relative;
+  }
+
+  .carouselSubtitle {
+    position: absolute;
+    color: #20c9ac;
+    left: 15%;
+    margin-top: 10%;
+    margin-bottom: 16px;
+    font-family: "Exo", sans-serif;
+    font-size: 1rem;
+  }
+
+  .carouselTitle {
+    position: absolute;
+    color: white;
+    left: 15%;
+    margin-top: 12%;
+    margin-bottom: 16px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.8rem;
+    width: 30%;
   }
 }
 
@@ -74,9 +58,10 @@
   color: white;
   background-color: transparent;
   border: dashed 1px #20c9ac;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  border-radius: 1%;
+  width: 80px;
+  height: 80px;
+  margin: 1%;
 
   &:hover {
     transition: 1s ease-in-out;
