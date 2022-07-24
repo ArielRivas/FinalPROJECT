@@ -26,3 +26,25 @@
   border: 2px solid;
   border-image: linear-gradient(180deg, var(--color-interactive),var(--color-background-gradial)) 1;
 }
+.container__Launch-button button {
+  border-radius: 50%;
+  margin-top: 30px;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  background: none;
+  color: white;
+  border: dashed 2px white;
+  transition: all 0.3s;
+  &:hover {
+    color: var(--color-interactive);
+    border: dashed 2px var(--color-interactive);
+    transform: scale(1.5)
+  }
+}
+.illustration {
+  padding: 30px;
+  transform: rotate(90deg);
+}
