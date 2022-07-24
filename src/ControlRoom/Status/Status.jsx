@@ -7,10 +7,11 @@ import Dashboard from './Dashboard';
 const Status = () => {
   return (
     <section className='container__Status'>
+      <div className='container__Status-Dashboard'>
+      <div className="container__Status-Dashboard-button"><Dashboard/></div>
+      </div>
        <div><img  className="container__Status-img " src={imgStatus} alt='spaceship Render'></img></div>
-       <div className="container__Status-Dashboard-a"><Dashboard/></div>
-       <div className="container__Status-Dashboard-b"><Dashboard/></div>
-       <div className="container__Status-Dashboard-c"><Dashboard/></div>
+       
     </section>
   )
 }

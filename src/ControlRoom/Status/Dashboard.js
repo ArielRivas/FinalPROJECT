@@ -1,7 +1,6 @@
 import { Component } from "react";
 import Modal from './Modal.js';
 
-
 class Dashboard extends Component {
   constructor() {
     super();
@@ -21,13 +20,12 @@ class Dashboard extends Component {
   };
   render() {
     return (
-      <main>
-        <h1>React Modal</h1>
+      <main className="container__Modal">
         <Modal show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
+          <p>Combining Viking pressure and temperature data with Mars Orbital Laser Altimeter topography data, we have computed the fraction of the martian year during which pressure and temperature allow for liquid water to be stable on the martian surface. We find that liquid water would be stable within the Hellas and Argyre basin and over the northern lowlands equatorward of about 40°. The location with the maximum period of stable conditions for liquid water is in the southeastern portion of Utopia Planitia, where 34% of the year liquid water would be stable if it were present. Locations of stability appear to correlate with the distribution of valley networks.</p>
         </Modal>
-        <button type="button" onClick={this.showModal}>
-          Open
+        <button className="container__Modal-OpenButton" type="button" onClick={this.showModal}>
+          Go
         </button>
       </main>
     );
