@@ -1,10 +1,10 @@
-import React from 'react'
+import { handleSubmit, React } from 'react'
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import './Login.scss';
 import loginTicket from '../assets/login/loginTicket.png'
 import { loginUser } from "../redux/auth/auth.actions";
-
+import { API } from '../shared/Api';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -30,13 +30,19 @@ const Login = () => {
     }
   }
 
+  const onSubmit = (formData) => {
+    API.post("api/users/login", formData).then((res) => {
+      localStorage.setItem("token", res.data.token);
+    })
+  }
+
   return (
     <div className='loginContainer'>
 
       <div className='formContainer'>
         <img className='loginTicket' src={loginTicket} alt="imgLogin" />
 
-        <form className='loginForm' onSubmit={doLogin}>
+        <form className='loginForm' onSubmit={onsubmit}>
           <label>
             <p>ID Number</p>
             <input id="id" type="text" name="ID" required placeholder='Write your ID soldier' />
