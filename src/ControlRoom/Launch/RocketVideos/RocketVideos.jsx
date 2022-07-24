@@ -1,5 +1,5 @@
 import React from "react";
-import videoRocket from "../../../assets/controlRoom/video.mp4";
+import videoRocketA from "../../../assets/controlRoom/video.mp4";
 import './RocketVideos.scss';
 
 
@@ -10,7 +10,7 @@ const RocketVideos = () => {
     <section className='container__video-launch'>
        
       <video className="container__video-launch-a" width="70%" height="auto" autoPlay muted>
-      <source src={videoRocket} type='video/mp4'></source>
+      <source src={videoRocketA} type='video/mp4'></source>
       Your browser does not support the video tag.
     </video>
     </section>
