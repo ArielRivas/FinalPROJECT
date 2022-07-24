@@ -1,9 +1,9 @@
 const TaskCard = ({Task}) => {
     return (
       <>
-        <h3>{Task.id}</h3>
-        <p>{Task.description}</p>
-        <span>{Task.active}</span>
+        <h3>{Task._id}</h3>
+        <p>{Task.descripcion}</p>
+        <span>{Task.check}</span>
       </>
     )
   };
