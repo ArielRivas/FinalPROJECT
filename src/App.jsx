@@ -1,28 +1,31 @@
 import "./App.scss";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar/NavBar";
+import { Routes, Route } from "react-router-dom";
 import ControlRoom from "./ControlRoom/ControlRoom";
-import TodoContainer from "./ControlRoom/TodoContainer/TodoContainer";
+import TodoContainer from './ControlRoom/TodoContainer/TodoContainer';
 import Navigation from "./ControlRoom/Navigation/Navigation";
-import Launch from "./ControlRoom/Launch/RocketVideos/RocketVideos";
 import Status from "./ControlRoom/Status/Status";
+import Launch from "./ControlRoom/Launch/Launch";
+import RocketVideos from "./ControlRoom/Launch/RocketVideos/RocketVideos";
 
 const App = () => {
   return (
-    <Router>
+   
       <div className='App'>
         <NavBar />
-        <Switch>
-          <Route path='/controlroom' component={ControlRoom} />
-          <Route path='/todoContainer' component={TodoContainer} />
-          <Route path='/navigation' component={Navigation} />
-          <Route path='/launch' component={Launch} />
-          <Route path='/status' component={Status} />
-        </Switch>
+        <Routes>
+          <Route path='/controlroom/*' element={<ControlRoom/>}/>
+          <Route path="*" element={<div>Ruta no encontrada</div>} />
+          <Route path='/todocontainer' element={<TodoContainer/>} />
+          <Route path='/navigation' element={<Navigation/>} />
+          <Route path='/status' element={<Status/>} />
+          <Route path='/launch' element={<Launch/>} />
+          <Route path='/rocketvideos' element={<RocketVideos/>} />
+          <Route path="*" element={<div>Ruta no encontrada</div>} />
+        </Routes>
       </div>
-        <App date={Date.now()} />
-    </Router>
   );
 };
 
 export default App;
+
