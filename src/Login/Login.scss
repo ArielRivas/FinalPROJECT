@@ -193,3 +193,20 @@ input {
 .btnLogin:hover {
   background-color: #044136;
 }
+
+input {
+  margin-bottom: 24px;
+  width: 350px;
+  height: 38px;
+  background-color: #101923;
+  border: 1px solid #2b659b;
+  border-radius: 3px;
+  font-family: "Exo", sans-serif;
+  font-size: 0.9rem;
+  padding: 2%;
+  color: white;
+
+  &::placeholder {
+    color: white;
+  }
+}
