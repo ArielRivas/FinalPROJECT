@@ -1,14 +1,11 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
-
-// reducers
-import authReducer from './auth/auth.reducer';
+import {createStore, combineReducers} from 'redux';
+import TaskListReduxReducer from './TaskListRedux/tasks.reducer';
 
 const rootReducer = combineReducers({
-    auth: authReducer
-});
+   
+    TaskListRedux: TaskListReduxReducer,
+  });
+  
+const store = createStore(rootReducer);
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
-
-export default store;
+export default store

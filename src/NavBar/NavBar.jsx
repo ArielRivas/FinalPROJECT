@@ -1,16 +1,28 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import './NavBar.scss'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./NavBar.scss";
+import imageIcon from "../assets/controlRoom/Group 12-1.png";
 
 const NavBar = () => {
   return (
     <header className='container__NavBar'>
-        <nav className='container__NavBar-navBar'>
-            <span><img className='container__NavBar-navBar-iconNavBar' src="../assets/controlRoom/Group 12-1.png" alt="iconRocket"/>The Last Mission</span>
-            <Link to="/controlroom">Control Room</Link>
-        </nav>  
+      <span>
+        <img className='iconNavBar' src={imageIcon} alt='iconRocket' />
+        The Last Mission
+      </span>
+      <nav className='container__NavBar-navBar'>
+        <Link to='/'>
+          <span className='navBar_Link'>Planets</span>
+        </Link>
+        <span className='dot'></span>
+        <Link to='/controlroom'>
+          <span className='navBar_Link'>Control Room</span>
+        </Link>
+      </nav>
     </header>
-  )
-}
 
-export default NavBar
+
+  );
+};
+
+export default NavBar;
