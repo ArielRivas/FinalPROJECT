@@ -10,20 +10,19 @@ import RocketVideos from "./ControlRoom/Launch/RocketVideos/RocketVideos";
 
 const App = () => {
   return (
-   
-      <div className='App'>
-        <NavBar />
-        <Routes>
-          <Route path='/controlroom/*' element={<ControlRoom/>}/>
-          <Route path="*" element={<div>Ruta no encontrada</div>} />
-          <Route path='/todocontainer' element={<TodoContainer/>} />
-          <Route path='/navigation' element={<Navigation/>} />
-          <Route path='/status' element={<Status/>} />
-          <Route path='/launch' element={<Launch/>} />
-          <Route path='/rocketvideos' element={<RocketVideos/>} />
-          <Route path="*" element={<div>Ruta no encontrada</div>} />
-        </Routes>
-      </div>
+
+    <div className='App'>
+      <NavBar />
+      <Routes>
+        <Route path='/controlroom/*' element={<ControlRoom />} />
+        <Route path='/todocontainer' element={<TodoContainer />} />
+        <Route path='/navigation' element={<Navigation />} />
+        <Route path='/status' element={<Status />} />
+        <Route path='/launch' element={<Launch />} />
+        <Route path='/rocketvideos' element={<RocketVideos />} />
+        <Route path="*" element={<div>Ruta no encontrada</div>} />
+      </Routes>
+    </div>
   );
 };
 
